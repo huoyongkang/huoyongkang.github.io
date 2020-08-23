@@ -4,14 +4,60 @@
   
   <url>
     <loc>http://huoyongkang.com/categories/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/categories/Golang/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/tags/golang/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/2019/12/18/golang-gin-query-parameters-array-map.html</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://huoyongkang.com/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/post/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://huoyongkang.com/tags/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/post/2019-12-13-golang-gin-parameters-in-path/</loc>
+    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/post/2019-12-15-golang-gin-query-parameters-source-code-analysis/</loc>
+    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/about/</loc>
+    <lastmod>2015-03-10T00:13:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>http://huoyongkang.com/search/</loc>
   </url>
   
 </urlset>
