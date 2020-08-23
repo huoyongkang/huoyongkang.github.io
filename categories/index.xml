@@ -6,26 +6,35 @@
     <description>Recent content in Categories on Hawk的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Dec 2019 21:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Nov 2017 15:44:32 +0800</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Golang</title>
-      <link>/categories/Golang/</link>
-      <pubDate>Wed, 18 Dec 2019 21:55:00 +0800</pubDate>
+      <title>python</title>
+      <link>/categories/python/</link>
+      <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/categories/Golang/</guid>
+      <guid>/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>new</title>
-      <link>/categories/new/</link>
-      <pubDate>Wed, 18 Dec 2019 21:55:00 +0800</pubDate>
+      <title>SQL</title>
+      <link>/categories/SQL/</link>
+      <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/categories/new/</guid>
+      <guid>/categories/SQL/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>金融</title>
+      <link>/categories/%E9%87%91%E8%9E%8D/</link>
+      <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
+      
+      <guid>/categories/%E9%87%91%E8%9E%8D/</guid>
       <description></description>
     </item>
     

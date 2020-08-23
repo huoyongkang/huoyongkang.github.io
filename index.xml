@@ -6,54 +6,45 @@
     <description>Recent content on Hawk的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Dec 2019 21:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Nov 2017 15:44:32 +0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Golang Gin 实战（五）| 接收数组和 Map</title>
-      <link>/2019/12/18/golang-gin-query-parameters-array-map.html</link>
-      <pubDate>Wed, 18 Dec 2019 21:55:00 +0800</pubDate>
+      <title>Python类高级用法</title>
+      <link>/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/2019/12/18/golang-gin-query-parameters-array-map.html</guid>
-      <description>标题 段落内容 标题 段落内容 标题 段落内容 标题 段落内容 标题 段落内容</description>
+      <guid>/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</guid>
+      <description>python类的高级方法 给类绑定属性或方法 我们可以直接在实例或类上，给类绑定属性，如果在实例上绑定，则只对当前实例有效，对于其他实例就会失效，如果要对类生效，就要直接对类进行绑定。 同时，也可以对类绑定方法。 1 2 3 4 5 6 7 8 9 def set_time(h,m,s): self.hour = h self.minute = m self.second = s from types import MethodType time.set_time = MethodType(set_time,None,time) t = time() t.set_time = MethodType(set_time,t,time) 以上就是</description>
     </item>
     
     <item>
-      <title>为什么生成不了</title>
-      <link>/post/test2/</link>
-      <pubDate>Wed, 18 Dec 2019 21:55:00 +0800</pubDate>
+      <title>SQL基础语法</title>
+      <link>/post/SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/post/test2/</guid>
-      <description>标题 段落内容</description>
+      <guid>/post/SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+      <description>基本概念 数据库：容器 表：某种特定数据类型的结构化清单 表名唯一 模式：关于数据库和表的布局及特性的信息 数据类型：每列所允许的数据类型 行：表中的一个记录 主键：固定的某一列，可以唯一的标识表中的每一行 检索数据 SELECT 1 2 SELECT prod_name FROM Products; 语句不区分大小写 所有空格被忽略 逗号隔开列名 1 2 SELECT * FROM Products; 检索不同值 1</description>
     </item>
     
     <item>
-      <title>Golang Gin 实战（三）| 路由参数</title>
-      <link>/post/2019-12-13-golang-gin-parameters-in-path/</link>
-      <pubDate>Fri, 13 Dec 2019 21:00:00 +0800</pubDate>
+      <title>外汇市场发展历程</title>
+      <link>/post/%E6%88%91%E5%9B%BD%E5%A4%96%E6%B1%87%E5%B8%82%E5%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/</link>
+      <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/post/2019-12-13-golang-gin-parameters-in-path/</guid>
-      <description>标题 段落内容 标题 段落内容 标题 段落内容 标题 段落内容 标题 段落内容</description>
-    </item>
-    
-    <item>
-      <title>Golang Gin 实战（三）| 路由参数</title>
-      <link>/post/2019-12-15-golang-gin-query-parameters-source-code-analysis/</link>
-      <pubDate>Fri, 13 Dec 2019 21:00:00 +0800</pubDate>
-      
-      <guid>/post/2019-12-15-golang-gin-query-parameters-source-code-analysis/</guid>
-      <description>标题 段落内容 标题 段落内容 标题 段落内容 标题 段落内容 标题 段落内容</description>
+      <guid>/post/%E6%88%91%E5%9B%BD%E5%A4%96%E6%B1%87%E5%B8%82%E5%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/</guid>
+      <description>发展历程 外汇市场结构 主要是零售市场和批发市场 零售市场 客户与外汇指定银行间的市场 批发市场（银行间外汇市场） 指定银行在办理结售汇业务时，会出现超买或超卖现象，这时外汇指定银行就可以通过银行间外汇市场进行外汇交易，平衡头寸 凡在中国境内营业的金融机构，其之间的外汇交易，均应通过银行间外汇</description>
     </item>
     
     <item>
       <title>关于我</title>
       <link>/about/</link>
-      <pubDate>Tue, 10 Mar 2015 00:13:27 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>《Go 实战笔记》系列作者，《Golang Gin 实战》系列作者，《Android Gradle权威指南》作者，现负责技术管理。 Android Gradle权威指南 公众号，扫码关注</description>
+      <description>金融本硕，代码爱好者，时间管理实践者 技能树 量化投资 多因子策略 高频日内回转策略 CPT交易系统 Python 机器学习 爬虫 PyQt5 C++ STL标准库 Qt 数据分析 Tableau Power BI SQL Matlab 年度目标 机器学习 Tensorflow 2.0框架 NLP SQL更加精进 Tableau更加精进 阅读更多的书 合理安排时间</description>
     </item>
     
     <item>
