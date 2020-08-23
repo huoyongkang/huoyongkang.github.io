@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hawk的博客</title>
-    <link>http://huoyongkang.com/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Hawk的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 18 Dec 2019 21:55:00 +0800</lastBuildDate>
     
-	<atom:link href="http://huoyongkang.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Golang</title>
-      <link>http://huoyongkang.com/categories/Golang/</link>
+      <link>/categories/Golang/</link>
       <pubDate>Wed, 18 Dec 2019 21:55:00 +0800</pubDate>
       
-      <guid>http://huoyongkang.com/categories/Golang/</guid>
+      <guid>/categories/Golang/</guid>
       <description></description>
     </item>
     
