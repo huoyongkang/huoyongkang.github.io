@@ -2,138 +2,138 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hawk的博客</title>
-    <link>_/</link>
+    <link>-/</link>
     <description>Recent content on Hawk的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 29 Jul 2020 15:44:32 +0800</lastBuildDate>
     
-	<atom:link href="_/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="-/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>578.查询回答率最高的问题</title>
-      <link>_/Leetcode/578.%E6%9F%A5%E8%AF%A2%E5%9B%9E%E7%AD%94%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <link>-/Leetcode/578.%E6%9F%A5%E8%AF%A2%E5%9B%9E%E7%AD%94%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/578.%E6%9F%A5%E8%AF%A2%E5%9B%9E%E7%AD%94%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <guid>-/Leetcode/578.%E6%9F%A5%E8%AF%A2%E5%9B%9E%E7%AD%94%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
       <description>刷题时间：2020年8月11日 21:52:22 我的解答 /* Write your T-SQL query statement below */ select question_id as survey_log from ( select *,row_number() over (order by ratio desc) as rn from ( select question_id, sum(case when action=&#39;answer&#39; then 1.0 else 0.0 end)/sum(case when action=&#39;show&#39; then 1.0 else 0.0 end) as ratio from survey_log group by question_id ) t1 ) t2 where rn=1 其他解答 select question_id as survey_log from survey_log group by question_id having count(answer_id)/count(distinct q_num) = (select max(rate) from (select count(answer_id)/count(distinct q_num) as rate from survey_log group by question_id)t1 ) 笔记 直接在group by&amp;hellip;having中判断最大的，省</description>
     </item>
     
     <item>
       <title>579.查询员工累计薪水</title>
-      <link>_/Leetcode/579.%E6%9F%A5%E8%AF%A2%E5%91%98%E5%B7%A5%E7%B4%AF%E8%AE%A1%E8%96%AA%E6%B0%B4/</link>
+      <link>-/Leetcode/579.%E6%9F%A5%E8%AF%A2%E5%91%98%E5%B7%A5%E7%B4%AF%E8%AE%A1%E8%96%AA%E6%B0%B4/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/579.%E6%9F%A5%E8%AF%A2%E5%91%98%E5%B7%A5%E7%B4%AF%E8%AE%A1%E8%96%AA%E6%B0%B4/</guid>
+      <guid>-/Leetcode/579.%E6%9F%A5%E8%AF%A2%E5%91%98%E5%B7%A5%E7%B4%AF%E8%AE%A1%E8%96%AA%E6%B0%B4/</guid>
       <description>刷题时间：2020年8月11日 21:52:49 我的解答 /* Write your T-SQL query statement below */ select t1.Id as id,t1.Month as month,t1.Salary from ( select Id,Month,sum(Salary) over (partition by Id order by Month ROWS 2 PRECEDING) as Salary from ( select * from Employee tt where Month &amp;lt;&amp;gt; ( select b.Month from (select Id,max(Month) as Month from Employee group by Id) b where b.Id=tt.Id ) ) ttt ) t1 order by t1.Id,t1.Month desc 其他解答 select Id,Month,sum(Salary) over(partition by Id order by Month rows between 2 preceding and 0 following) as Salary from ( select Id,Month,Salary, row_number() over(partition by Id order by Month desc) as rn from Employee ) T where rn&amp;lt;&amp;gt;1 order by Id,Month desc 笔记 判断月份时，我用</description>
     </item>
     
     <item>
       <title>580.统计各专业学生人数</title>
-      <link>_/Leetcode/580.%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%E4%BA%BA%E6%95%B0/</link>
+      <link>-/Leetcode/580.%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%E4%BA%BA%E6%95%B0/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/580.%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%E4%BA%BA%E6%95%B0/</guid>
+      <guid>-/Leetcode/580.%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%E4%BA%BA%E6%95%B0/</guid>
       <description>刷题时间：2020年8月13日 00:03:47 我的解答 /* Write your T-SQL query statement below */ select dept_name,(case when cnt is null then 0 else cnt end) as student_number from ( ( select dept_id,count(1) as cnt from student group by dept_id ) t1 full join department t2 on t1.dept_id = t2.dept_id ) order by student_number desc,dept_name 其他解答 Select * From( Select dept_name ,(Select Count(*) From student Where department.dept_id=student.dept_id) as student_number From department ) As Temp Order By Temp.student_number DESC,Temp.dept_name ASC</description>
     </item>
     
     <item>
       <title>584. 寻找用户推荐人</title>
-      <link>_/Leetcode/584.-%E5%AF%BB%E6%89%BE%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90%E4%BA%BA/</link>
+      <link>-/Leetcode/584.-%E5%AF%BB%E6%89%BE%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90%E4%BA%BA/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/584.-%E5%AF%BB%E6%89%BE%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90%E4%BA%BA/</guid>
+      <guid>-/Leetcode/584.-%E5%AF%BB%E6%89%BE%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90%E4%BA%BA/</guid>
       <description>刷题时间：2020年8月13日 00:12:25 我的解答 /* Write your T-SQL query statement below */ select name from customer where referee_id &amp;lt;&amp;gt; 2 or referee_id is null 不愧是简单级别的题目</description>
     </item>
     
     <item>
       <title>585.2016年的投资</title>
-      <link>_/Leetcode/585.2016%E5%B9%B4%E7%9A%84%E6%8A%95%E8%B5%84/</link>
+      <link>-/Leetcode/585.2016%E5%B9%B4%E7%9A%84%E6%8A%95%E8%B5%84/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/585.2016%E5%B9%B4%E7%9A%84%E6%8A%95%E8%B5%84/</guid>
+      <guid>-/Leetcode/585.2016%E5%B9%B4%E7%9A%84%E6%8A%95%E8%B5%84/</guid>
       <description>刷题时间：2020年8月13日 20:57:33 我的解答 # Write your MySQL query statement below select round(sum(a),2) as TIV_2016 from ( select avg(a.TIV_2016) as a from insurance a,insurance b where a.PID &amp;lt;&amp;gt; b.PID and a.TIV_2015 = b.TIV_2015 and (select count(1) from insurance c where c.LAT=a.LAT and c.LON=a.LON)=1 group by a.PID ) t 其他解答 # Write your MySQL query statement below SELECT ROUND(SUM(TIV_2016), 2) as TIV_2016 FROM( SELECT *, count(*) over(partition by TIV_2015) as cnt_1, count(*) over(partition by LAT, LON) as cnt_2 FROM insurance ) a WHERE a.cnt_1 &amp;gt; 1 AND a.cnt_2 &amp;lt; 2 用窗口函数统计cnt，逻辑更加简单，效率更高，之后应该从这个角度</description>
     </item>
     
     <item>
       <title>586.订单最多的客户</title>
-      <link>_/Leetcode/586.%E8%AE%A2%E5%8D%95%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%A2%E6%88%B7/</link>
+      <link>-/Leetcode/586.%E8%AE%A2%E5%8D%95%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%A2%E6%88%B7/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/586.%E8%AE%A2%E5%8D%95%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%A2%E6%88%B7/</guid>
+      <guid>-/Leetcode/586.%E8%AE%A2%E5%8D%95%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%A2%E6%88%B7/</guid>
       <description>刷题时间：2020年8月17日 21:06:29 我的解法 # Write your MySQL query statement below select customer_number from ( select customer_number,count(1) as cnt from orders group by customer_number ) tt order by cnt desc limit 1 其他解法 # Write your MySQL query statement below select t.customer_number from ( # 找出和最大订单值相等的客户值 select customer_number,count(*) as res from Orders group by customer_number) t where t.res = ( # 找出最大的订单值 select max(e.res) from ( select customer_number,count(*) as res from Orders group by customer_number) e) 同解唯一和非唯一问题，非唯一问题只需要在后面运用一</description>
     </item>
     
     <item>
       <title>597.好友申请I：总体通过率</title>
-      <link>_/Leetcode/597.%E5%A5%BD%E5%8F%8B%E7%94%B3%E8%AF%B7I%E6%80%BB%E4%BD%93%E9%80%9A%E8%BF%87%E7%8E%87/</link>
+      <link>-/Leetcode/597.%E5%A5%BD%E5%8F%8B%E7%94%B3%E8%AF%B7I%E6%80%BB%E4%BD%93%E9%80%9A%E8%BF%87%E7%8E%87/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/597.%E5%A5%BD%E5%8F%8B%E7%94%B3%E8%AF%B7I%E6%80%BB%E4%BD%93%E9%80%9A%E8%BF%87%E7%8E%87/</guid>
+      <guid>-/Leetcode/597.%E5%A5%BD%E5%8F%8B%E7%94%B3%E8%AF%B7I%E6%80%BB%E4%BD%93%E9%80%9A%E8%BF%87%E7%8E%87/</guid>
       <description>刷题时间：2020年8月17日 21:42:30 我的解答 /* Write your T-SQL query statement below */ select round(1.0* count(distinct concat(requester_id,accepter_id)) / (case when count(distinct concat(sender_id,send_to_id))=0 then 1 else count(distinct concat(sender_id,send_to_id)) end),2) as accept_rate from friend_request a,request_accepted b 其他解答 SELECT convert(decimal(10, 2), isnull(( SELECT COUNT(*) AS accepted_count FROM ( SELECT DISTINCT requester_id, accepter_id FROM request_accepted ) t2 ) * 1.0 / ( SELECT nullif(COUNT(*),0) AS send_count FROM ( SELECT DISTINCT sender_id, send_to_id FROM friend_request ) t1 ), 0)) AS accept_rate select round( ifnull( (select count(distinct requester_id ,accepter_id) from request_accepted) / (select count(distinct sender_id ,send_to_id) from friend_request) ,0) ,2) as accept_rate ; 直接用isnull判断，省去了case when的较</description>
     </item>
     
     <item>
       <title>601.体育馆的人流量</title>
-      <link>_/Leetcode/601.%E4%BD%93%E8%82%B2%E9%A6%86%E7%9A%84%E4%BA%BA%E6%B5%81%E9%87%8F/</link>
+      <link>-/Leetcode/601.%E4%BD%93%E8%82%B2%E9%A6%86%E7%9A%84%E4%BA%BA%E6%B5%81%E9%87%8F/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/Leetcode/601.%E4%BD%93%E8%82%B2%E9%A6%86%E7%9A%84%E4%BA%BA%E6%B5%81%E9%87%8F/</guid>
+      <guid>-/Leetcode/601.%E4%BD%93%E8%82%B2%E9%A6%86%E7%9A%84%E4%BA%BA%E6%B5%81%E9%87%8F/</guid>
       <description>刷题时间：2020年8月19日 00:24:36 我的解答 /* Write your T-SQL query statement below */ with tmptable as ( select *,row_number() over (order by visit_date) as rn from stadium where people &amp;gt;= 100 ) select distinct a.id,a.visit_date,a.people from tmptable a,tmptable b where (a.id - b.id &amp;gt;= 2 or b.id - a.id &amp;gt;= 2 or (a.id - b.id=1 and a.id+1 in (select id from tmptable))) and a.id - b.id = a.rn - b.rn 困难题，很有意思，分为三种情况判断是否处于连续区间 其他解答 官方解答 select distinct t1.* from stadium t1, stadium t2, stadium t3 where t1.people &amp;gt;= 100 and t2.people &amp;gt;= 100 and t3.people &amp;gt;= 100</description>
     </item>
     
     <item>
       <title>Python类高级用法</title>
-      <link>_/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</link>
+      <link>-/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</guid>
+      <guid>-/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</guid>
       <description>python类的高级方法 给类绑定属性或方法 我们可以直接在实例或类上，给类绑定属性，如果在实例上绑定，则只对当前实例有效，对于其他实例就会失效，如果要对类生效，就要直接对类进行绑定。 同时，也可以对类绑定方法。 1 2 3 4 5 6 7 8 9 def set_time(h,m,s): self.hour = h self.minute = m self.second = s from types import MethodType time.set_time = MethodType(set_time,None,time) t = time() t.set_time = MethodType(set_time,t,time) 以上就是</description>
     </item>
     
     <item>
       <title>SQL基础语法</title>
-      <link>_/post/SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+      <link>-/post/SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/post/SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+      <guid>-/post/SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
       <description>基本概念 数据库：容器 表：某种特定数据类型的结构化清单 表名唯一 模式：关于数据库和表的布局及特性的信息 数据类型：每列所允许的数据类型 行：表中的一个记录 主键：固定的某一列，可以唯一的标识表中的每一行 检索数据 SELECT 1 2 SELECT prod_name FROM Products; 语句不区分大小写 所有空格被忽略 逗号隔开列名 1 2 SELECT * FROM Products; 检索不同值 1</description>
     </item>
     
     <item>
       <title>外汇市场发展历程</title>
-      <link>_/post/%E6%88%91%E5%9B%BD%E5%A4%96%E6%B1%87%E5%B8%82%E5%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/</link>
+      <link>-/post/%E6%88%91%E5%9B%BD%E5%A4%96%E6%B1%87%E5%B8%82%E5%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/post/%E6%88%91%E5%9B%BD%E5%A4%96%E6%B1%87%E5%B8%82%E5%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/</guid>
+      <guid>-/post/%E6%88%91%E5%9B%BD%E5%A4%96%E6%B1%87%E5%B8%82%E5%9C%BA%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/</guid>
       <description>发展历程 外汇市场结构 主要是零售市场和批发市场 零售市场 客户与外汇指定银行间的市场 批发市场（银行间外汇市场） 指定银行在办理结售汇业务时，会出现超买或超卖现象，这时外汇指定银行就可以通过银行间外汇市场进行外汇交易，平衡头寸 凡在中国境内营业的金融机构，其之间的外汇交易，均应通过银行间外汇</description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>_/about/</link>
+      <link>-/about/</link>
       <pubDate>Tue, 10 Mar 2015 00:13:27 +0000</pubDate>
       
-      <guid>_/about/</guid>
+      <guid>-/about/</guid>
       <description>金融本硕，代码爱好者，时间管理实践者 技能树 量化投资 多因子策略 高频日内回转策略 CPT交易系统 Python 机器学习 爬虫 PyQt5 C++ STL标准库 Qt 数据分析 Tableau Power BI SQL Matlab 年度目标 机器学习 Tensorflow 2.0框架 NLP SQL更加精进 Tableau更加精进 阅读更多的书 合理安排时间</description>
     </item>
     
     <item>
       <title>归档</title>
-      <link>_/archives/</link>
+      <link>-/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>_/archives/</guid>
+      <guid>-/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>搜索</title>
-      <link>_/search/</link>
+      <link>-/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>_/search/</guid>
+      <guid>-/search/</guid>
       <description></description>
     </item>
     

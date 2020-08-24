@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hawk的博客</title>
-    <link>_/tags/</link>
+    <link>-/tags/</link>
     <description>Recent content in Tags on Hawk的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 29 Jul 2020 15:44:32 +0800</lastBuildDate>
     
-	<atom:link href="_/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="-/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Leetcode</title>
-      <link>_/tags/Leetcode/</link>
+      <link>-/tags/Leetcode/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>_/tags/Leetcode/</guid>
+      <guid>-/tags/Leetcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>_/tags/python/</link>
+      <link>-/tags/python/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/tags/python/</guid>
+      <guid>-/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQL</title>
-      <link>_/tags/SQL/</link>
+      <link>-/tags/SQL/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/tags/SQL/</guid>
+      <guid>-/tags/SQL/</guid>
       <description></description>
     </item>
     
     <item>
       <title>数据分析</title>
-      <link>_/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
+      <link>-/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</guid>
+      <guid>-/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</guid>
       <description></description>
     </item>
     
     <item>
       <title>编程</title>
-      <link>_/tags/%E7%BC%96%E7%A8%8B/</link>
+      <link>-/tags/%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/tags/%E7%BC%96%E7%A8%8B/</guid>
+      <guid>-/tags/%E7%BC%96%E7%A8%8B/</guid>
       <description></description>
     </item>
     
     <item>
       <title>金融</title>
-      <link>_/tags/%E9%87%91%E8%9E%8D/</link>
+      <link>-/tags/%E9%87%91%E8%9E%8D/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>_/tags/%E9%87%91%E8%9E%8D/</guid>
+      <guid>-/tags/%E9%87%91%E8%9E%8D/</guid>
       <description></description>
     </item>
     
