@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hawk的博客</title>
-    <link>/categories/</link>
+    <link>bloghyk.com/categories/</link>
     <description>Recent content in Categories on Hawk的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 29 Jul 2020 15:44:32 +0800</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="bloghyk.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Leetcode</title>
-      <link>/categories/Leetcode/</link>
+      <link>bloghyk.com/categories/Leetcode/</link>
       <pubDate>Wed, 29 Jul 2020 15:44:32 +0800</pubDate>
       
-      <guid>/categories/Leetcode/</guid>
+      <guid>bloghyk.com/categories/Leetcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>/categories/python/</link>
+      <link>bloghyk.com/categories/python/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/categories/python/</guid>
+      <guid>bloghyk.com/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQL</title>
-      <link>/categories/SQL/</link>
+      <link>bloghyk.com/categories/SQL/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/categories/SQL/</guid>
+      <guid>bloghyk.com/categories/SQL/</guid>
       <description></description>
     </item>
     
     <item>
       <title>金融</title>
-      <link>/categories/%E9%87%91%E8%9E%8D/</link>
+      <link>bloghyk.com/categories/%E9%87%91%E8%9E%8D/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>/categories/%E9%87%91%E8%9E%8D/</guid>
+      <guid>bloghyk.com/categories/%E9%87%91%E8%9E%8D/</guid>
       <description></description>
     </item>
     
