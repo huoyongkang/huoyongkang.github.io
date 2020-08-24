@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Hawk的博客</title>
-    <link>-/categories/python/</link>
+    <link>/categories/python/</link>
     <description>Recent content in python on Hawk的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 29 Nov 2017 15:44:32 +0800</lastBuildDate>
     
-	<atom:link href="-/categories/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python类高级用法</title>
-      <link>-/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</link>
+      <link>/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</link>
       <pubDate>Wed, 29 Nov 2017 15:44:32 +0800</pubDate>
       
-      <guid>-/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</guid>
+      <guid>/post/Python%E7%B1%BB%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</guid>
       <description>python类的高级方法 给类绑定属性或方法 我们可以直接在实例或类上，给类绑定属性，如果在实例上绑定，则只对当前实例有效，对于其他实例就会失效，如果要对类生效，就要直接对类进行绑定。 同时，也可以对类绑定方法。 1 2 3 4 5 6 7 8 9 def set_time(h,m,s): self.hour = h self.minute = m self.second = s from types import MethodType time.set_time = MethodType(set_time,None,time) t = time() t.set_time = MethodType(set_time,t,time) 以上就是</description>
     </item>
     
