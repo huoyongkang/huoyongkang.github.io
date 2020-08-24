@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>关于我 | Hawk的博客</title>
-    <meta property="og:title" content="关于我 - Hawk的博客">
+    <title>585.2016年的投资 | Hawk的博客</title>
+    <meta property="og:title" content="585.2016年的投资 - Hawk的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2015-03-10T00:13:27&#43;08:00'>
+    <meta property="article:published_time" content='2020-07-29T15:44:32&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2015-03-10T00:13:27&#43;08:00'>
+    <meta property="article:modified_time" content='2020-07-29T15:44:32&#43;08:00'>
         
     <meta name="Keywords" content="python,leetcode">
-    <meta name="description" content="今天要比昨天更精进一点">
+    <meta name="description" content="585.2016年的投资">
         
     <meta name="author" content="Hawk">
-    <meta property="og:url" content="/about/">
+    <meta property="og:url" content="/Leetcode/585.2016%E5%B9%B4%E7%9A%84%E6%8A%95%E8%B5%84/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -59,7 +59,7 @@
                     
                     <a  href="/archives/" title="归档">归档</a>
                     
-                    <a class="current" href="/about/" title="关于">关于</a>
+                    <a  href="/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -138,12 +138,7 @@
 <div class="post-toc" style="position: absolute; top: 188px;">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#技能树">技能树</a></li>
-    <li><a href="#年度目标">年度目标</a></li>
-  </ul>
-</nav>
+        <nav id="TableOfContents"></nav>
     </div>
 </div>
 <script type="text/javascript">
@@ -175,11 +170,18 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">关于我</h1>
+            <h1 class="post-title">585.2016年的投资</h1>
         </header>
         <date class="post-meta meta-date">
-            2015年3月10日
+            2020年7月29日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/Leetcode'>Leetcode</a></span>
+            
+        </div>
         
         
         <div class="post-meta">
@@ -189,51 +191,34 @@
         
         
         <div class="post-content">
-            <p>金融本硕，代码爱好者，时间管理实践者</p>
-<h2 id="技能树">技能树</h2>
-<ul>
-<li>量化投资
-<ul>
-<li>多因子策略</li>
-<li>高频日内回转策略</li>
-<li>CPT交易系统</li>
-</ul>
-</li>
-<li>Python
-<ul>
-<li>机器学习</li>
-<li>爬虫</li>
-<li>PyQt5</li>
-</ul>
-</li>
-<li>C++
-<ul>
-<li>STL标准库</li>
-<li>Qt</li>
-</ul>
-</li>
-<li>数据分析
-<ul>
-<li>Tableau</li>
-<li>Power BI</li>
-<li>SQL</li>
-</ul>
-</li>
-<li>Matlab</li>
-</ul>
-<h2 id="年度目标">年度目标</h2>
-<ul>
-<li>机器学习
-<ul>
-<li>Tensorflow 2.0框架</li>
-<li>NLP</li>
-</ul>
-</li>
-<li>SQL更加精进</li>
-<li>Tableau更加精进</li>
-<li>阅读更多的书</li>
-<li>合理安排时间</li>
-</ul>
+            <p>刷题时间：2020年8月13日 20:57:33</p>
+<p>
+        <img class="mx-auto" alt="image-20200813205719764" src="https://raw.githubusercontent.com/huoyongkang/PictureBed/master/20200813205719.png" />   
+    </p>
+<h1 id="我的解答">我的解答</h1>
+<pre><code class="language-mssql" data-lang="mssql"># Write your MySQL query statement below
+select round(sum(a),2) as TIV_2016 from (
+    select avg(a.TIV_2016) as a from
+    insurance a,insurance b 
+    where a.PID &lt;&gt; b.PID 
+    and a.TIV_2015 = b.TIV_2015 
+    and (select count(1) from insurance c where c.LAT=a.LAT and c.LON=a.LON)=1
+    group by a.PID
+) t
+</code></pre><h1 id="其他解答">其他解答</h1>
+<pre><code class="language-mssql" data-lang="mssql"># Write your MySQL query statement below
+SELECT 
+    ROUND(SUM(TIV_2016), 2) as TIV_2016
+FROM(
+    SELECT
+        *,
+        count(*) over(partition by TIV_2015) as cnt_1,
+        count(*) over(partition by LAT, LON) as cnt_2
+    FROM
+        insurance
+) a 
+WHERE a.cnt_1 &gt; 1 AND a.cnt_2 &lt; 2
+</code></pre><p>用窗口函数统计cnt，逻辑更加简单，效率更高，之后应该从这个角度切入</p>
 
         </div>
 
@@ -246,9 +231,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/Leetcode/578.%E6%9F%A5%E8%AF%A2%E5%9B%9E%E7%AD%94%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/">578.查询回答率最高的问题</a></li>
         
-        <li><a href="/search/">搜索</a></li>
+        <li><a href="/Leetcode/579.%E6%9F%A5%E8%AF%A2%E5%91%98%E5%B7%A5%E7%B4%AF%E8%AE%A1%E8%96%AA%E6%B0%B4/">579.查询员工累计薪水</a></li>
+        
+        <li><a href="/Leetcode/580.%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%E4%BA%BA%E6%95%B0/">580.统计各专业学生人数</a></li>
+        
+        <li><a href="/Leetcode/584.-%E5%AF%BB%E6%89%BE%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90%E4%BA%BA/">584. 寻找用户推荐人</a></li>
+        
+        <li><a href="/Leetcode/586.%E8%AE%A2%E5%8D%95%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%A2%E6%88%B7/">586.订单最多的客户</a></li>
         
     </ul>
 </div>
@@ -256,7 +247,11 @@
 
         <div class="post-meta meta-tags">
             
-            没有标签
+            <ul class="clearfix">
+                
+                <li><a href='/tags/Leetcode'>Leetcode</a></li>
+                
+            </ul>
             
         </div>
     </article>

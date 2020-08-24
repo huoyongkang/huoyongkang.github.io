@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>关于我 | Hawk的博客</title>
-    <meta property="og:title" content="关于我 - Hawk的博客">
+    <title>601.体育馆的人流量 | Hawk的博客</title>
+    <meta property="og:title" content="601.体育馆的人流量 - Hawk的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2015-03-10T00:13:27&#43;08:00'>
+    <meta property="article:published_time" content='2020-07-29T15:44:32&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2015-03-10T00:13:27&#43;08:00'>
+    <meta property="article:modified_time" content='2020-07-29T15:44:32&#43;08:00'>
         
     <meta name="Keywords" content="python,leetcode">
-    <meta name="description" content="今天要比昨天更精进一点">
+    <meta name="description" content="601.体育馆的人流量">
         
     <meta name="author" content="Hawk">
-    <meta property="og:url" content="/about/">
+    <meta property="og:url" content="/Leetcode/601.%E4%BD%93%E8%82%B2%E9%A6%86%E7%9A%84%E4%BA%BA%E6%B5%81%E9%87%8F/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -59,7 +59,7 @@
                     
                     <a  href="/archives/" title="归档">归档</a>
                     
-                    <a class="current" href="/about/" title="关于">关于</a>
+                    <a  href="/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -140,8 +140,8 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#技能树">技能树</a></li>
-    <li><a href="#年度目标">年度目标</a></li>
+    <li><a href="#官方解答">官方解答</a></li>
+    <li><a href="#他人解答">他人解答</a></li>
   </ul>
 </nav>
     </div>
@@ -175,11 +175,18 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">关于我</h1>
+            <h1 class="post-title">601.体育馆的人流量</h1>
         </header>
         <date class="post-meta meta-date">
-            2015年3月10日
+            2020年7月29日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/Leetcode'>Leetcode</a></span>
+            
+        </div>
         
         
         <div class="post-meta">
@@ -189,51 +196,58 @@
         
         
         <div class="post-content">
-            <p>金融本硕，代码爱好者，时间管理实践者</p>
-<h2 id="技能树">技能树</h2>
+            <p>刷题时间：2020年8月19日 00:24:36</p>
+<p>
+        <img class="mx-auto" alt="image-20200819002450105" src="https://raw.githubusercontent.com/huoyongkang/PictureBed/master/20200819002457.png" />   
+    </p>
+<h1 id="我的解答">我的解答</h1>
+<pre><code class="language-mssql" data-lang="mssql">/* Write your T-SQL query statement below */
+with tmptable as (
+    select *,row_number() over (order by visit_date) as rn from stadium where people &gt;= 100
+)
+select 
+distinct a.id,a.visit_date,a.people
+from tmptable a,tmptable b 
+where (a.id - b.id &gt;= 2 
+or b.id - a.id &gt;= 2 
+or  (a.id - b.id=1 and a.id+1 in (select id from tmptable)))
+and a.id - b.id = a.rn - b.rn
+</code></pre><p>困难题，很有意思，分为三种情况判断是否处于连续区间</p>
+<h1 id="其他解答">其他解答</h1>
+<h2 id="官方解答">官方解答</h2>
+<pre><code class="language-mssql" data-lang="mssql">select distinct t1.*
+from stadium t1, stadium t2, stadium t3
+where t1.people &gt;= 100 and t2.people &gt;= 100 and t3.people &gt;= 100
+and
+(
+	  (t1.id - t2.id = 1 and t1.id - t3.id = 2 and t2.id - t3.id =1)  -- t1, t2, t3
+    or
+    (t2.id - t1.id = 1 and t2.id - t3.id = 2 and t1.id - t3.id =1) -- t2, t1, t3
+    or
+    (t3.id - t2.id = 1 and t2.id - t1.id =1 and t3.id - t1.id = 2) -- t3, t2, t1
+)
+order by t1.id
+;
+</code></pre><p>三表外联，效率应该不高</p>
+<h2 id="他人解答">他人解答</h2>
+<pre><code class="language-mssql" data-lang="mssql">with t as (
+select id,visit_date,people,id - (row_number() over(order by id)) diff
+from stadium
+where people &gt;= 100)
+select id,visit_date,people
+from (
+    select id,visit_date,people,count(*) over(partition by diff) c
+    from t) t1
+where c &gt;= 3
+</code></pre><p>这个解法很有趣，用两个窗口函数</p>
 <ul>
-<li>量化投资
-<ul>
-<li>多因子策略</li>
-<li>高频日内回转策略</li>
-<li>CPT交易系统</li>
+<li>第一个窗口函数下来diff会形成不同的分组</li>
+<li>第二个窗口函数根据diff的不同分组进行聚合，获得每个分组的cnt</li>
+<li>最后加上条件让cnt&gt;=3</li>
+<li>值得学习</li>
 </ul>
-</li>
-<li>Python
-<ul>
-<li>机器学习</li>
-<li>爬虫</li>
-<li>PyQt5</li>
-</ul>
-</li>
-<li>C++
-<ul>
-<li>STL标准库</li>
-<li>Qt</li>
-</ul>
-</li>
-<li>数据分析
-<ul>
-<li>Tableau</li>
-<li>Power BI</li>
-<li>SQL</li>
-</ul>
-</li>
-<li>Matlab</li>
-</ul>
-<h2 id="年度目标">年度目标</h2>
-<ul>
-<li>机器学习
-<ul>
-<li>Tensorflow 2.0框架</li>
-<li>NLP</li>
-</ul>
-</li>
-<li>SQL更加精进</li>
-<li>Tableau更加精进</li>
-<li>阅读更多的书</li>
-<li>合理安排时间</li>
-</ul>
+<p>官方给的解答效率太低，在1000w数据量下就要1000w的三次方数据表</p>
+<p>我的解法应该比双层窗口慢一些，或者很接近？</p>
 
         </div>
 
@@ -246,9 +260,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/Leetcode/578.%E6%9F%A5%E8%AF%A2%E5%9B%9E%E7%AD%94%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/">578.查询回答率最高的问题</a></li>
         
-        <li><a href="/search/">搜索</a></li>
+        <li><a href="/Leetcode/579.%E6%9F%A5%E8%AF%A2%E5%91%98%E5%B7%A5%E7%B4%AF%E8%AE%A1%E8%96%AA%E6%B0%B4/">579.查询员工累计薪水</a></li>
+        
+        <li><a href="/Leetcode/580.%E7%BB%9F%E8%AE%A1%E5%90%84%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%E4%BA%BA%E6%95%B0/">580.统计各专业学生人数</a></li>
+        
+        <li><a href="/Leetcode/584.-%E5%AF%BB%E6%89%BE%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90%E4%BA%BA/">584. 寻找用户推荐人</a></li>
+        
+        <li><a href="/Leetcode/585.2016%E5%B9%B4%E7%9A%84%E6%8A%95%E8%B5%84/">585.2016年的投资</a></li>
         
     </ul>
 </div>
@@ -256,7 +276,11 @@
 
         <div class="post-meta meta-tags">
             
-            没有标签
+            <ul class="clearfix">
+                
+                <li><a href='/tags/Leetcode'>Leetcode</a></li>
+                
+            </ul>
             
         </div>
     </article>
